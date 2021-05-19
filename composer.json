@@ -1,0 +1,7 @@
+{
+    "name": "dvsa/contracts",
+    "description": "A set of abstractions that define core services provided by the DVSA",
+    "type": "library",
+    "license": "MIT",
+    "require": {}
+}
