@@ -1,7 +1,21 @@
 {
     "name": "dvsa/contracts",
-    "description": "A set of abstractions that define core services provided by the DVSA",
     "type": "library",
+    "description": "A set of abstractions that define core services provided by the DVSA",
+    "keywords": ["dvsa", "abstractions", "interoperability", "standards"],
     "license": "MIT",
-    "require": {}
+    "authors": [
+        {
+            "name": "DVSA",
+            "homepage": "https://www.gov.uk/government/organisations/driver-and-vehicle-standards-agency"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dvsa\\Contracts\\": ""
+        }
+    }
 }
