@@ -17,5 +17,8 @@
         "psr-4": {
             "Dvsa\\Contracts\\": ""
         }
+    },
+    "require-dev": {
+        "bamarni/composer-bin-plugin": "^1.4"
     }
 }
