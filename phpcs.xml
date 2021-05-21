@@ -2,7 +2,9 @@
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="authentication-cognito" xsi:noNamespaceSchemaLocation="./vendor-bin/php-codesniffer/vendor/squizlabs/php_codesniffer/phpcs.xsd">
     <file>./</file>
 
+    <!-- https://github.com/nektos/act/issues/669 -->
     <exclude-pattern>*/_actions/*</exclude-pattern>
+    
     <exclude-pattern>*/vendor/*</exclude-pattern>
     <exclude-pattern>*/vendor-bin/*</exclude-pattern>
 
