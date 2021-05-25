@@ -1,5 +1,3 @@
-## Contributing
-
 [fork]: /fork
 [pr]: /compare
 [issue]: /issue
@@ -8,6 +6,7 @@
 [code-of-conduct]: CODE_OF_CONDUCT.md
 [good-commit-message]: https://github.com/erlang/otp/wiki/writing-good-commit-messages
 
+## Contributing
 Hi there! We're thrilled that you'd like to contribute to this project. Your help is essential for keeping it great.
 
 Please note that this project is released with a [Contributor Code of Conduct][code-of-conduct]. By participating in this project you agree to abide by its terms.
@@ -20,6 +19,7 @@ We'd also love PRs. If you're thinking of a large PR, we advise opening up an is
 
 ## Proposing a contract be added
 1. Ensure the proposed contract follows our [design principles][design-principles] for contracts.
+1. Follow our current [style guide][style]. Any linting errors should be displayed after running: `./vendor/bin/phpcs` (ensure `composer bin phpcs install ` has been executed prior to this to install PHP-CodeSniffer).
 1. Create an [issue][issue] detailing the proposed abstraction, and its usages. Optionally, support the issue with a [pull request][pr] of the proposed implementation.
 
 ## Submitting a pull request
@@ -28,12 +28,6 @@ We'd also love PRs. If you're thinking of a large PR, we advise opening up an is
 1. Make your change.
 1. Push to your fork and [submit a pull request][pr].
 1. Grab a coffee, and wait for your pull request to be reviewed and merged.
-
-Here are a few things you can do that will increase the likelihood of your pull request being accepted:
-- Follow the current [style guide][style]. Any linting errors should be displayed after running: `composer check-code-style`.
-- Write and update tests.
-- Keep your changes as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests.
-- Write a [good commit message][good-commit-message].
 
 Work in Progress pull requests are welcome to get feedback early on, or if there is something currently blocking you.
 

@@ -3,6 +3,5 @@
 /.vscode
 
 # Package managers
-/vendor/
-/composer.lock
-
+vendor/
+composer.lock
