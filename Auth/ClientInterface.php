@@ -9,7 +9,7 @@ interface ClientInterface
 {
     public function register(string $identifier, string $password, array $attributes = []): ArrayAccess;
 
-    public function authenticate(string $identifier, string $password): string;
+    public function authenticate(string $identifier, string $password): ArrayAccess;
     public function changePassword(string $identifier, string $newPassword): bool;
 
     public function changeAttribute(string $identifier, string $key, string $value): bool;
