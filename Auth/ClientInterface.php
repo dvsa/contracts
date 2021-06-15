@@ -7,7 +7,7 @@ use ArrayAccess;
 
 interface ClientInterface
 {
-    public function register(string $identifier, string $password, array $attributes = []): ArrayAccess;
+    public function register(string $identifier, string $password, array $attributes = []);
 
     public function authenticate(string $identifier, string $password);
     public function changePassword(string $identifier, string $newPassword): bool;
@@ -18,5 +18,5 @@ interface ClientInterface
     public function enableUser(string $identifier): bool;
     public function disableUser(string $identifier): bool;
 
-    public function getUserByIdentifier(string $identifier): ArrayAccess;
+    public function getUserByIdentifier(string $identifier);
 }
