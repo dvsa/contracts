@@ -16,7 +16,7 @@ interface AccessTokenInterface extends BaseAccessTokenInterface
     /**
      * Returns the id token string of this instance.
      *
-     * @return string
+     * @return null|string
      */
-    public function getIdToken(): string;
+    public function getIdToken(): ?string;
 }
