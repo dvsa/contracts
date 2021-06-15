@@ -12,7 +12,8 @@
     ],
     "require": {
         "php": "^7.2.5 || ^8.0",
-        "league/oauth2-client": "^2.6"
+        "ext-json": "*",
+        "league/oauth2-client": "^2.6",
     },
     "replace": {
         "paragonie/random_compat": "9.99.99"
