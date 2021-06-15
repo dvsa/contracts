@@ -1,8 +1,6 @@
 <?php
 
-namespace Dvsa\Authentication\Contracts;
-
-use Dvsa\Contracts\Auth\ResourceOwnerInterface;
+namespace Dvsa\Contracts\Auth;
 
 abstract class AbstractResourceOwner implements ResourceOwnerInterface
 {
