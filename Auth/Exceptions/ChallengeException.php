@@ -1,6 +1,6 @@
 <?php
 
-namespace Dvsa\Contracts\Auth;
+namespace Dvsa\Contracts\Auth\Exceptions;
 
 /**
  * This exception will be thrown when an authenticate call returns an
