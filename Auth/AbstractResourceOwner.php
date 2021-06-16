@@ -75,6 +75,11 @@ abstract class AbstractResourceOwner implements ResourceOwnerInterface
         $this->attributes[$offset] = $value;
     }
 
+    /**
+     * @param  string  $offset
+     *
+     * @return void
+     */
     public function offsetUnset($offset): void
     {
         unset($this->attributes[$offset]);

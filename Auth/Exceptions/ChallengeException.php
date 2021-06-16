@@ -5,6 +5,8 @@ namespace Dvsa\Contracts\Auth\Exceptions;
 /**
  * This exception will be thrown when an authenticate call returns an
  * authentication challenge.
+ *
+ * @psalm-suppress MissingConstructor
  */
 class ChallengeException extends \Exception
 {
