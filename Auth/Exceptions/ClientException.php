@@ -1,6 +1,6 @@
 <?php
 
-namespace Dvsa\Contracts\Auth;
+namespace Dvsa\Contracts\Auth\Exceptions;
 
 /**
  * This exception will be thrown when a client library throws an exception.
@@ -9,4 +9,5 @@ namespace Dvsa\Contracts\Auth;
  */
 class ClientException extends \Exception
 {
+    //
 }
