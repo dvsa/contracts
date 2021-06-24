@@ -17,6 +17,8 @@ interface OAuthClientInterface
     public function enableUser(string $identifier): bool;
     public function disableUser(string $identifier): bool;
 
+    public function getResourceOwner(AccessTokenInterface $token): ResourceOwnerInterface;
+
     public function decodeToken(string $token): array;
 
     public function refreshTokens(string $refreshToken, string $identifier): AccessTokenInterface;
