@@ -64,7 +64,7 @@ interface OAuthClientInterface
     public function refreshTokens(string $refreshToken, string $identifier): AccessTokenInterface;
 
     /**
-     * @throws ClientException when there is an issue with authenticating a user.
+     * @throws ClientException when there is an issue with finding a user.
      */
     public function getUserByIdentifier(string $identifier): ResourceOwnerInterface;
 }
