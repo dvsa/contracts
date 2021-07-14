@@ -3,21 +3,19 @@ declare(strict_types=1);
 
 namespace Dvsa\Contracts\Auth;
 
-use League\OAuth2\Client\Provider\GenericResourceOwner;
-
 trait CreatesResourceOwners
 {
     /**
-     * @var string
-     * @psalm-var class-string<ResourceOwnerInterface>
+     * @var null|string
+     * @psalm-var null|class-string<ResourceOwnerInterface>
      */
-    protected $resourceOwnerClass = GenericResourceOwner::class;
+    protected $resourceOwnerClass = null;
 
     /**
-     * @return string
-     * @psalm-return class-string<ResourceOwnerInterface>
+     * @return null|string
+     * @psalm-return null|class-string<ResourceOwnerInterface>
      */
-    public function getResourceOwnerClass(): string
+    public function getResourceOwnerClass(): ?string
     {
         return $this->resourceOwnerClass;
     }
@@ -37,9 +35,19 @@ trait CreatesResourceOwners
 
     /**
      * Creates a resource owner object using the provided class name.
+     * If no class string was provided, an anonymous class will be returned using `id` as the `getId()` key.
      */
-    protected function createResourceOwner(array $claims, string $resourceOwnerId = 'id'): ResourceOwnerInterface
+    protected function createResourceOwner(array $claims): ResourceOwnerInterface
     {
-        return new $this->resourceOwnerClass($claims, $resourceOwnerId);
+        if (!isset($this->resourceOwnerClass)) {
+            return new class($claims) extends AbstractResourceOwner implements ResourceOwnerInterface {
+                public function getId(): string
+                {
+                    return $this->get('id');
+                }
+            };
+        }
+
+        return new $this->resourceOwnerClass($claims);
     }
 }
