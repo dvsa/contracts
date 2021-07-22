@@ -37,7 +37,7 @@ trait CreatesResourceOwners
      * Creates a resource owner object using the provided class name.
      * If no class string was provided, an anonymous class will be returned using `id` as the `getId()` key.
      */
-    protected function createResourceOwner(array $claims): ResourceOwnerInterface
+    public function createResourceOwner(array $claims): ResourceOwnerInterface
     {
         if (!isset($this->resourceOwnerClass)) {
             return new class($claims) extends AbstractResourceOwner implements ResourceOwnerInterface {
