@@ -14,7 +14,7 @@
         "php": "^7.2.5 || ^8.0",
         "ext-json": "*",
         "league/oauth2-client": "^2.6",
-        "paragonie/random_compat": "^2 || ^9.99"
+        "paragonie/random_compat": "^9.99"
     },
     "conflict": {
         "guzzlehttp/guzzle": "<6.2.1"
