@@ -56,21 +56,11 @@ abstract class AbstractResourceOwner implements ResourceOwnerInterface
         return $this->toArray();
     }
 
-    /**
-     * @param  string  $offset
-     *
-     * @return bool
-     */
     public function offsetExists($offset): bool
     {
         return isset($this->attributes[$offset]);
     }
 
-    /**
-     * @param  string  $offset
-     *
-     * @return mixed
-     */
     public function offsetGet($offset)
     {
         return $this->get($offset);
@@ -79,27 +69,18 @@ abstract class AbstractResourceOwner implements ResourceOwnerInterface
     /**
      * @param  string  $offset
      * @param  mixed   $value
-     *
-     * @return void
      */
     public function offsetSet($offset, $value): void
     {
         $this->attributes[$offset] = $value;
     }
 
-    /**
-     * @param  string  $offset
-     *
-     * @return void
-     */
     public function offsetUnset($offset): void
     {
         unset($this->attributes[$offset]);
     }
 
     /**
-     * @param  string  $key
-     *
      * @return mixed
      */
     public function __get(string $key)
@@ -108,32 +89,19 @@ abstract class AbstractResourceOwner implements ResourceOwnerInterface
     }
 
     /**
-     * @param  string  $key
      * @param  mixed   $value
-     *
-     * @return void
      */
-    public function __set(string $key, $value)
+    public function __set(string $key, $value): void
     {
         $this->offsetSet($key, $value);
     }
 
-    /**
-     * @param  string  $key
-     *
-     * @return bool
-     */
-    public function __isset(string $key)
+    public function __isset(string $key): bool
     {
         return $this->offsetExists($key);
     }
 
-    /**
-     * @param  string  $key
-     *
-     * @return void
-     */
-    public function __unset(string $key)
+    public function __unset(string $key): void
     {
         $this->offsetUnset($key);
     }
