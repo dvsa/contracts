@@ -13,11 +13,12 @@
     "require": {
         "php": "^7.2.5 || ^8.0",
         "ext-json": "*",
-        "league/oauth2-client": "^2.6",
+        "league/oauth2-client": "^2.7",
         "paragonie/random_compat": "^9.99"
     },
     "conflict": {
-        "guzzlehttp/guzzle": "<6.2.1"
+        "guzzlehttp/guzzle": "<6.5.8",
+        "guzzlehttp/psr7": "<1.9.1"
     },
     "autoload": {
         "psr-4": {
@@ -26,5 +27,16 @@
     },
     "require-dev": {
         "bamarni/composer-bin-plugin": "^1.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "bamarni/composer-bin-plugin": true
+        }
+    },
+    "extra" : {
+        "bamarni-bin": {
+            "bin-links": true,
+            "forward-command": true
+        }
     }
 }
