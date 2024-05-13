@@ -16,7 +16,7 @@ class ChallengeException extends \Exception
     protected $challengeName;
 
     /**
-     * @var array
+     * @var array<string, mixed>
      */
     protected $parameters = [];
 
@@ -37,11 +37,17 @@ class ChallengeException extends \Exception
         return $this;
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getParameters(): array
     {
         return $this->parameters;
     }
 
+    /**
+     * @param array<string, mixed> $parameters
+     */
     public function setParameters(array $parameters): self
     {
         $this->parameters = $parameters;

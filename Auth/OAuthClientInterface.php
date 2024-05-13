@@ -16,6 +16,8 @@ interface OAuthClientInterface
     public function authenticate(string $identifier, string $password): AccessTokenInterface;
 
     /**
+     * @param array<string, mixed> $attributes
+     *
      * @throws ClientException when there is an issue while creating user.
      */
     public function register(string $identifier, string $password, array $attributes = []): ResourceOwnerInterface;
@@ -31,6 +33,8 @@ interface OAuthClientInterface
     public function changeAttribute(string $identifier, string $key, string $value): bool;
 
     /**
+     * @param array<string, mixed> $attributes
+     *
      * @throws ClientException when there is an issue with changing a user's attributes.
      */
     public function changeAttributes(string $identifier, array $attributes): bool;
@@ -53,6 +57,8 @@ interface OAuthClientInterface
     public function getResourceOwner(AccessTokenInterface $token): ResourceOwnerInterface;
 
     /**
+     * @return array<string, mixed>
+     *
      * @throws InvalidTokenException when the token provided is invalid and cannot be decoded.
      */
     public function decodeToken(string $token): array;

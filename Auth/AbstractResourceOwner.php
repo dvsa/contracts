@@ -5,15 +5,21 @@ namespace Dvsa\Contracts\Auth;
 abstract class AbstractResourceOwner implements ResourceOwnerInterface
 {
     /**
-     * @var array
+     * @var array<string, mixed>
      */
     protected $attributes = [];
 
+    /**
+     * @param array<string, mixed> $attributes
+     */
     public function __construct(array $attributes = [])
     {
         $this->attributes = $attributes;
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getAttributes(): array
     {
         return $this->attributes;
@@ -34,11 +40,17 @@ abstract class AbstractResourceOwner implements ResourceOwnerInterface
         return $default;
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function toArray(): array
     {
         return $this->attributes;
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function jsonSerialize(): array
     {
         return $this->toArray();
