@@ -61,6 +61,7 @@ abstract class AbstractResourceOwner implements ResourceOwnerInterface
         return isset($this->attributes[$offset]);
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->get($offset);
