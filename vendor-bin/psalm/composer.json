@@ -1,6 +1,6 @@
 {
     "require": {
-        "vimeo/psalm": "^5.0"
+        "vimeo/psalm": "*"
     },
     "config": {
         "preferred-install": "dist"
