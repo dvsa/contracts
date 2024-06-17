@@ -2,7 +2,12 @@
     "name": "dvsa/contracts",
     "type": "library",
     "description": "A set of abstractions that define core services provided by the DVSA",
-    "keywords": ["dvsa", "abstractions", "interoperability", "standards"],
+    "keywords": [
+        "dvsa",
+        "abstractions",
+        "interoperability",
+        "standards"
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.2.5 || ^8.0",
@@ -27,7 +32,7 @@
             "bamarni/composer-bin-plugin": true
         }
     },
-    "extra" : {
+    "extra": {
         "bamarni-bin": {
             "bin-links": true,
             "forward-command": true
